@@ -27,10 +27,13 @@ brew tap homebrew/versions
 brew install bash-completion2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
-# Prompts for password
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-# Change to the new shell, prompts for password
-chsh -s /usr/local/bin/bash
+
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  # Prompts for password
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  # Change to the new shell, prompts for password
+  chsh -s /usr/local/bin/bash;
+fi;
 
 brew install wget --with-iri
 brew install go

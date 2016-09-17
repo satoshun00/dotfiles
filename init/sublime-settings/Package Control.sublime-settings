@@ -25,5 +25,8 @@
     "SublimeLinter-contrib-textlint",
     "SublimeLinter-shellcheck",
     "SyncedSideBar"
+  ],
+  "repositories": [
+    "https://github.com/titoBouzout/SideBarEnhancements/tree/st3"
   ]
 }

@@ -1,32 +1,29 @@
 {
-	"bootstrapped": true,
-	"in_process_packages":
-	[
-	],
-	"installed_packages":
-	[
-		"AutoFileName",
-		"Babel",
-		"CSS Snippets",
-		"EditorConfig",
-		"Git",
-		"GitGutter",
-		"GNU Octave Completions",
-		"HTML-CSS-JS Prettify",
-		"HTML5",
-		"HTMLBeautify",
-		"JavaScriptNext - ES6 Syntax",
-		"JsFormat",
-		"Package Control",
-		"Polymer & Web Component Snippets",
-		"Pretty JSON",
-		"Sass",
-		"SASS Snippets",
-		"SideBarEnhancements",
-		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-textlint",
-		"SublimeLinter-shellcheck",
-		"SyncedSideBar"
-	]
+  "bootstrapped": true,
+  "in_process_packages":[],
+  "installed_packages":[
+    "AutoFileName",
+    "Babel",
+    "CSS Snippets",
+    "EditorConfig",
+    "Git",
+    "GitGutter",
+    "GNU Octave Completions",
+    "HTML-CSS-JS Prettify",
+    "HTML5",
+    "HTMLBeautify",
+    "JavaScriptNext - ES6 Syntax",
+    "JsFormat",
+    "Package Control",
+    "Polymer & Web Component Snippets",
+    "Pretty JSON",
+    "Sass",
+    "SASS Snippets",
+    "SideBarEnhancements",
+    "SublimeLinter",
+    "SublimeLinter-contrib-eslint",
+    "SublimeLinter-contrib-textlint",
+    "SublimeLinter-shellcheck",
+    "SyncedSideBar"
+  ]
 }

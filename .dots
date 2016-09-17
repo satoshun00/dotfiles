@@ -76,6 +76,8 @@ function runDots() {
   echo "------------------------------"
   echo "TODO: GoogleJapaneseIME setting"
   echo "TODO: Some ssh key settings"
+  echo "TODO: Install Xcode"
+  echo "TODO: Login Slack teams: https://slack.com/signin/find"
 
   echo "------------------------------"
   echo "Completed running .dots, restart your computer to ensure all updates take effect"

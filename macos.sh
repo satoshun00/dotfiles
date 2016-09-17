@@ -380,7 +380,15 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-#defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
+killall Dock
+
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/App Store.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/System Preferences.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Sublime Text.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Utilities/Terminal.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 
 # Show only open applications in the Dock
 #defaults write com.apple.dock static-only -bool true
@@ -665,8 +673,10 @@ end tell
 EOD
 
 # Disable audible and visual bells
-defaults write com.apple.terminal "Bell" -bool false
-defaults write com.apple.terminal "VisualBell" -bool false
+TERMINAL_PLIST="$HOME/Library/Preferences/com.apple.Terminal.plist"
+TERMINAL_THEME=`/usr/libexec/PlistBuddy -c "Print 'Default Window Settings'" $TERMINAL_PLIST`
+/usr/libexec/PlistBuddy -c "Set 'Window Settings':$TERMINAL_THEME:Bell false" $TERMINAL_PLIST
+/usr/libexec/PlistBuddy -c "Set 'Window Settings':$TERMINAL_THEME:VisualBellOnlyWhenMuted false" $TERMINAL_PLIST
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first

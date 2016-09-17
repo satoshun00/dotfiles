@@ -164,6 +164,23 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
+# Force Click and haptic feedback
+defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool false
+defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool true
+
+# Haptic feedback
+# 0: Light
+# 1: Medium
+# 2: Firm
+defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
+defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
+
+# Tracking Speed
+# 0: Slow
+# 3: Fast
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 2.5
+
 # Increase sound quality for Bluetooth headphones/headsets
 #defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
@@ -646,6 +663,10 @@ tell application "Terminal"
 end tell
 
 EOD
+
+# Disable audible and visual bells
+defaults write com.apple.terminal "Bell" -bool false
+defaults write com.apple.terminal "VisualBell" -bool false
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first

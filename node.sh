@@ -6,4 +6,5 @@ else
   curl -L git.io/nodebrew | perl - setup
   source ~/.bashrc
   nodebrew install v6.6.0
+  nodebrew use v6.6.0
 fi

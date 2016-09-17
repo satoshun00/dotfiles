@@ -21,6 +21,8 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+# Bash 4
+brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
 # We installed the new shell, now we have to activate it
@@ -52,7 +54,7 @@ brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
-brew cask install --appdir="/Applications" sublime-text3
+brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 
 # Misc casks

@@ -48,6 +48,10 @@ brew install rbenv
 brew install heroku-toolbelt
 heroku update
 
+# Install Octave
+brew tap homebrew/science
+brew install octave
+
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions

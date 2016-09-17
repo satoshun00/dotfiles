@@ -676,7 +676,7 @@ EOD
 TERMINAL_PLIST="$HOME/Library/Preferences/com.apple.Terminal.plist"
 TERMINAL_THEME=`/usr/libexec/PlistBuddy -c "Print 'Default Window Settings'" $TERMINAL_PLIST`
 /usr/libexec/PlistBuddy -c "Set 'Window Settings':$TERMINAL_THEME:Bell false" $TERMINAL_PLIST
-/usr/libexec/PlistBuddy -c "Set 'Window Settings':$TERMINAL_THEME:VisualBellOnlyWhenMuted false" $TERMINAL_PLIST
+/usr/libexec/PlistBuddy -c "Set 'Window Settings':$TERMINAL_THEME:VisualBell false" $TERMINAL_PLIST
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first

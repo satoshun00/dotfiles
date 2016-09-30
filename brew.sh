@@ -79,6 +79,7 @@ brew cask install --appdir="/Applications" tunnelbear
 brew cask install --appdir="/Applications" adobe-creative-cloud
 brew cask install --appdir="/Applications" adobe-photoshop-cc
 brew cask install --appdir="/Applications" docker
+brew cask install --appdir="/Applications" music-manager
 
 # Remove outdated versions from the cellar.
 brew cleanup

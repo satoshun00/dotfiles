@@ -24,6 +24,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Disable the sound effects on boot
 #sudo nvram SystemAudioVolume=" "
 
+# Disable system alert beep
+defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0
+
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
 

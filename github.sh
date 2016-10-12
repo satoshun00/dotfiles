@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GITHUB_USERNAME=$(git config --get user.name)
+USERNAME=$(git config --get user.name)
 SSH_KEY="${HOME}/.ssh/id_rsa"
 KEY_NAME="$(whoami)@$(hostname)"
 
@@ -12,7 +12,10 @@ read -e GITHUB_OTP
 
 [ -n "${GITHUB_OTP}" ] || exit 0;
 
-result=$(curl --silent -u "${GITHUB_USERNAME}" --header "X-GitHub-OTP: ${GITHUB_OTP}" --data "{\"title\":\"${KEY_NAME}\",\"key\":\"$(cat ${SSH_KEY}.pub)\"}" https://api.github.com/user/keys)
+# POST ssh-pubkey to Github
+
+echo 'Enter your Password for Github.'
+result=$(curl --silent -u "${USERNAME}" --header "X-GitHub-OTP: ${GITHUB_OTP}" --data "{\"title\":\"${KEY_NAME}\",\"key\":\"$(cat ${SSH_KEY}.pub)\"}" https://api.github.com/user/keys)
 if echo "${result}" | grep -q 'key is already in use'; then
   echo 'Key is already in use.'
 elif echo "${result}" | grep -q '"verified": true'; then

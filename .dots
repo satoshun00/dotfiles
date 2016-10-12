@@ -71,6 +71,30 @@ function runDots() {
       echo ""
       ./node.sh
     fi
+    if [ $ARG == "ssh" ] || [ $ARG == "all" ]; then
+      # Run the ssh.sh Script
+      echo "------------------------------"
+      echo "Setting up ssh key."
+      echo "------------------------------"
+      echo ""
+      ./ssh.sh
+    fi
+    if [ $ARG == "github" ] || [ $ARG == "all" ]; then
+      # Run the github.sh Script
+      echo "------------------------------"
+      echo "Setting up github public keys."
+      echo "------------------------------"
+      echo ""
+      ./github.sh
+    fi
+    if [ $ARG == "bitbucket" ] || [ $ARG == "all" ]; then
+      # Run the bitbucket.sh Script
+      echo "------------------------------"
+      echo "Setting up bitbucket public keys."
+      echo "------------------------------"
+      echo ""
+      ./bitbucket.sh
+    fi
   done
 
   echo "------------------------------"

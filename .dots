@@ -76,7 +76,8 @@ function runDots() {
   echo "------------------------------"
   echo "TODO: GoogleJapaneseIME setting"
   echo "TODO: Some ssh key settings"
-  echo "TODO: Install Xcode"
+  echo "TODO: Install Xcode from AppStore"
+  echo "TODO: Install LINE from AppStore"
   echo "TODO: Login Slack teams: https://slack.com/signin/find"
 
   echo "------------------------------"

@@ -228,6 +228,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName MinimalClock path "/Library/Screen Savers/MinimalClock.qtz" type 1
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"

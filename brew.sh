@@ -80,6 +80,7 @@ brew cask install --appdir="/Applications" adobe-creative-cloud
 brew cask install --appdir="/Applications" adobe-photoshop-cc
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" music-manager
+brew cask install --appdir="/Applications" minimalclock
 
 # Remove outdated versions from the cellar.
 brew cleanup

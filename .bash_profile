@@ -2,7 +2,7 @@
 export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some
-for file in ~/.{bash_prompt,aliases,extra}; do
+for file in ~/.{bash_prompt,aliases}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -41,3 +41,14 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# virtualenv
+if [ -r /usr/local/bin/virtualenvwrapper.sh ] && [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+export WORKON_HOME=~/.virtualenvs
+
+# cuda
+export CUDA_HOME=/usr/local/cuda
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
+export PATH="$CUDA_HOME/bin:$PATH"

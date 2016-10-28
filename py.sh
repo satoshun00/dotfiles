@@ -12,6 +12,10 @@ echo "Setting up pip."
 # Install pip
 easy_install pip
 
+# Tensorflow deps
+easy_install -U six
+easy_install -U numpy
+easy_install wheel
 ###############################################################################
 # Virtual Enviroments                                                         #
 ###############################################################################
@@ -26,19 +30,10 @@ pip install --upgrade virtualenv
 pip install --upgrade virtualenvwrapper
 
 echo "------------------------------"
-echo "Source virtualenvwrapper from ~/.extra"
+echo "Source virtualenvwrapper"
 
-EXTRA_PATH=~/.extra
-
-if [ ! -r "${EXTRA_PATH}" ] && [ ! -f "${EXTRA_PATH}" ]; then
-  echo $EXTRA_PATH 
-  echo "" >> $EXTRA_PATH
-  echo "" >> $EXTRA_PATH
-  echo "# Source virtualenvwrapper, added by py.sh" >> $EXTRA_PATH
-  echo "export WORKON_HOME=~/.virtualenvs" >> $EXTRA_PATH
-  echo "source /usr/local/bin/virtualenvwrapper.sh" >> $EXTRA_PATH
-fi
-source $EXTRA_PATH
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
 ###############################################################################
 # Python 2 Virtual Enviroment                                                 #
@@ -87,6 +82,7 @@ pip install --upgrade nose
 pip install --upgrade unittest2
 pip install --upgrade seaborn
 pip install --upgrade scikit-learn
+pip install --upgrade scikit-image
 pip install --upgrade "ipython[all]"
 pip install --upgrade "https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.11.0rc1-py3-none-any.whl"
 

@@ -91,5 +91,9 @@ ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib
 
 echo "TODO: Install cudnn https://developer.nvidia.com/cudnn for tensorflow"
 
+# JUMAN++
+brew tap chezou/homebrew-jumanpp
+brew install jumanpp
+
 # Remove outdated versions from the cellar.
 brew cleanup

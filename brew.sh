@@ -84,12 +84,6 @@ brew cask install --appdir="/Applications" adobe-photoshop-cc
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" minimalclock
-brew cask install --appdir="/Applications" cuda
-
-# see: https://github.com/tensorflow/tensorflow/blob/v0.11.0rc1/tensorflow/g3doc/get_started/os_setup.md#mac-os-x-segmentation-fault-when-import-tensorflow
-ln -sf /usr/local/cuda/lib/libcuda.dylib /usr/local/cuda/lib/libcuda.1.dylib
-
-echo "TODO: Install cudnn https://developer.nvidia.com/cudnn for tensorflow"
 
 # JUMAN++
 brew tap chezou/homebrew-jumanpp

@@ -47,8 +47,3 @@ if [ -r /usr/local/bin/virtualenvwrapper.sh ] && [ -f /usr/local/bin/virtualenvw
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 export WORKON_HOME=~/.virtualenvs
-
-# cuda
-export CUDA_HOME=/usr/local/cuda
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
-export PATH="$CUDA_HOME/bin:$PATH"

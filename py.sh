@@ -58,7 +58,6 @@ pip install --upgrade unittest2
 pip install --upgrade seaborn
 pip install --upgrade scikit-learn
 pip install --upgrade "ipython[all]"
-pip install --upgrade "https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.11.0rc1-py2-none-any.whl"
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -84,7 +83,7 @@ pip install --upgrade seaborn
 pip install --upgrade scikit-learn
 pip install --upgrade scikit-image
 pip install --upgrade "ipython[all]"
-pip install --upgrade "https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.11.0rc1-py3-none-any.whl"
+pip install --upgrade "https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0rc1-py3-none-any.whl"
 
 echo "------------------------------"
 echo "Script completed."

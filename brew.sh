@@ -84,6 +84,7 @@ brew cask install --appdir="/Applications" adobe-photoshop-cc
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" minimalclock
+brew cask install --appdir="/Applications" libreoffice
 
 # JUMAN++
 brew tap chezou/homebrew-jumanpp

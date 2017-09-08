@@ -1,6 +1,11 @@
 EditorConfig.EditorConfig
 PeterJausovec.vscode-docker
 blanu.vscode-styled-jsx
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
+eg2.tslint
+eg2.vscode-npm-script
 flowtype.flow-for-vscode
 gerane.Theme-Twilight
+timonwong.shellcheck

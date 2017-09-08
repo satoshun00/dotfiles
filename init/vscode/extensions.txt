@@ -1,4 +1,5 @@
 EditorConfig.EditorConfig
+PeterJausovec.vscode-docker
 blanu.vscode-styled-jsx
 dbaeumer.vscode-eslint
 flowtype.flow-for-vscode

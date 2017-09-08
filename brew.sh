@@ -46,6 +46,7 @@ brew install rbenv
 brew install bazel
 brew install swig
 brew install coreutils
+brew install shellcheck
 
 # Install Heroku
 brew install heroku-toolbelt
@@ -66,6 +67,8 @@ brew cask install --appdir="~/Applications" xquartz
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" docker
+brew cask install --appdir="/Applications" visual-studio-code
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
@@ -80,12 +83,10 @@ brew cask install --appdir="/Applications" google-play-music-desktop-player
 brew cask install --appdir="/Applications" tunnelbear
 brew cask install --appdir="/Applications" adobe-creative-cloud
 brew cask install --appdir="/Applications" adobe-photoshop-cc
-brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" minimalclock
 brew cask install --appdir="/Applications" libreoffice
 brew cask install --appdir="/Applications" google-backup-and-sync
-brew cask install --appdir="/Applications" visual-studio-code
 
 # JUMAN++
 brew tap chezou/homebrew-jumanpp

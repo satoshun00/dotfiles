@@ -19,3 +19,6 @@ Thumbs.db
 
 # Sublime text
 *sublime-workspace
+
+# Visual Studio Code
+.vscode

@@ -5,7 +5,7 @@
   merge = refs/heads/master
 [core]
   excludesfile = ~/.gitignore
-  editor = subl -w
+  editor = code -w
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f

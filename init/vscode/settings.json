@@ -1,0 +1,12 @@
+{
+    "editor.tabCompletion": true,
+    "editor.renderWhitespace": "all",
+    "editor.scrollBeyondLastLine": false,
+    "javascript.validate.enable": false,
+    "workbench.colorTheme": "Twilight",
+    "flow.useNPMPackagedFlow": true,
+    "git.autofetch": false,
+    "git.countBadge": "off",
+    "workbench.startupEditor": "none",
+    "files.exclude": {}
+}

@@ -833,6 +833,18 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 cp -r init/sublime-settings/ ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2> /dev/null
 
 ###############################################################################
+# Visual Studio Code                                                          #
+###############################################################################
+
+mkdir -p ~/Library/Application\ Support/Code/User
+cp init/vscode/settings.json ~/Library/Application\ Support/Code/User/ 2> /dev/null
+
+modules=$(cat init/extensions.txt)
+for module in $modules; do
+  code --install-extension "$module" || true
+done
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

@@ -75,7 +75,6 @@ brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" google-drive
 brew cask install --appdir="/Applications" google-japanese-ime
 brew cask install --appdir="/Applications" google-play-music-desktop-player
 brew cask install --appdir="/Applications" tunnelbear
@@ -85,6 +84,8 @@ brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" minimalclock
 brew cask install --appdir="/Applications" libreoffice
+brew cask install --appdir="/Applications" google-backup-and-sync
+brew cask install --appdir="/Applications" visual-studio-code
 
 # JUMAN++
 brew tap chezou/homebrew-jumanpp

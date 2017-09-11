@@ -839,7 +839,7 @@ cp -r init/sublime-settings/ ~/Library/Application\ Support/Sublime\ Text*/Packa
 mkdir -p ~/Library/Application\ Support/Code/User
 cp init/vscode/settings.json ~/Library/Application\ Support/Code/User/ 2> /dev/null
 
-modules=$(cat init/extensions.txt)
+modules=$(cat init/vscode/extensions.txt)
 for module in $modules; do
   code --install-extension "$module" || true
 done

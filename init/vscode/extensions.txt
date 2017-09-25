@@ -8,4 +8,5 @@ eg2.tslint
 eg2.vscode-npm-script
 flowtype.flow-for-vscode
 gerane.Theme-Twilight
+jebbs.plantuml
 timonwong.shellcheck

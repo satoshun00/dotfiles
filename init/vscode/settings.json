@@ -1,5 +1,6 @@
 {
     "editor.formatOnPaste": true,
+    "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "editor.scrollBeyondLastLine": false,
     "editor.tabCompletion": true,

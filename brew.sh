@@ -59,6 +59,7 @@ brew install octave
 # Install Cask
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
+brew tap caskroom/fonts 
 
 # Core casks
 brew cask install --appdir="~/Applications" java
@@ -87,6 +88,9 @@ brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" minimalclock
 brew cask install --appdir="/Applications" libreoffice
 brew cask install --appdir="/Applications" google-backup-and-sync
+
+# Fonts casks
+brew cask install --appdir="/Applications" font-ricty-diminished
 
 # JUMAN++
 brew tap chezou/homebrew-jumanpp

@@ -28,5 +28,8 @@
     },
     "workbench.editor.closeOnFileDelete": false,
     "workbench.startupEditor": "none",
-    "workbench.tips.enabled": false
+    "workbench.tips.enabled": false,
+    "[markdown]": {
+        "editor.fontFamily": "Ricty Diminished, Menlo, Monaco, 'Courier New', monospace"
+    }
 }

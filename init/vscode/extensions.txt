@@ -2,6 +2,7 @@ Arjun.swagger-viewer
 EditorConfig.EditorConfig
 PeterJausovec.vscode-docker
 akmittal.hugofy
+blzjns.vscode-raml
 blanu.vscode-styled-jsx
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
@@ -11,5 +12,6 @@ eg2.vscode-npm-script
 flowtype.flow-for-vscode
 gerane.Theme-Twilight
 jebbs.plantuml
+ms-python.python
 mohsen1.prettify-json
 timonwong.shellcheck

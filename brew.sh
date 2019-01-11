@@ -49,7 +49,7 @@ brew install coreutils
 brew install shellcheck
 
 # Install Heroku
-brew install heroku-toolbelt
+brew install heroku/brew/heroku
 heroku update
 
 # Install Octave
@@ -80,12 +80,11 @@ brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" google-japanese-ime
-brew cask install --appdir="/Applications" google-play-music-desktop-player
+brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" tunnelbear
 brew cask install --appdir="/Applications" adobe-creative-cloud
-brew cask install --appdir="/Applications" adobe-photoshop-cc
+brew cask install --appdir="/Applications" chatwork
 brew cask install --appdir="/Applications" music-manager
-brew cask install --appdir="/Applications" minimalclock
 brew cask install --appdir="/Applications" libreoffice
 brew cask install --appdir="/Applications" google-backup-and-sync
 

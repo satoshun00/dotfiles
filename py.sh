@@ -10,7 +10,7 @@ echo "------------------------------"
 echo "Setting up pip."
 
 # Install pip
-easy_install pip
+wget -O - https://bootstrap.pypa.io/get-pip.py | python
 
 # Tensorflow deps
 easy_install -U six

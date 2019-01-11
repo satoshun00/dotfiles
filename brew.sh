@@ -39,7 +39,7 @@ brew install wget --with-iri
 brew install go
 brew install git
 brew install tree
-brew install python
+brew install python@2
 brew install python3
 brew install ruby-build
 brew install rbenv

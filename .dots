@@ -55,14 +55,6 @@ function runDots() {
       echo ""
       ./macos.sh
     fi
-    if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
-      # Run the aws.sh Script
-      echo "------------------------------"
-      echo "Setting up AWS development environment."
-      echo "------------------------------"
-      echo ""
-      ./aws.sh
-    fi
     if [ $ARG == "node" ] || [ $ARG == "all" ]; then
       # Run the node.sh Script
       echo "------------------------------"
@@ -102,6 +94,14 @@ function runDots() {
       echo "------------------------------"
       echo ""
       ./py.sh
+    fi
+    if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
+      # Run the aws.sh Script
+      echo "------------------------------"
+      echo "Setting up AWS development environment."
+      echo "------------------------------"
+      echo ""
+      ./aws.sh
     fi
   done
 

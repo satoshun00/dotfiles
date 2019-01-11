@@ -5,6 +5,6 @@ if which nodebrew > /dev/null; then
 else
   curl -L git.io/nodebrew | perl - setup
   source ~/.bashrc
-  nodebrew install v9.8.0
-  nodebrew use v9.8.0
+  nodebrew install v11.6.0
+  nodebrew use v11.6.0
 fi

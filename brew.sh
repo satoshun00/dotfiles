@@ -19,7 +19,7 @@ fi
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Bash 4
 brew install bash
@@ -35,7 +35,7 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
-brew install wget --with-iri
+brew install wget
 brew install go
 brew install git
 brew install git-lfs
@@ -44,8 +44,6 @@ brew install python@2
 brew install python
 brew install ruby-build
 brew install rbenv
-brew install bazel
-brew install swig
 brew install coreutils
 brew install shellcheck
 
@@ -54,13 +52,12 @@ brew install heroku/brew/heroku
 heroku update
 
 # Install Octave
-brew tap homebrew/science
+brew tap brewsci/bio
 brew install octave
 
 # Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
-brew tap caskroom/fonts 
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
 
 # Core casks
 brew cask install --appdir="~/Applications" java
@@ -85,7 +82,6 @@ brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" tunnelbear
 brew cask install --appdir="/Applications" adobe-creative-cloud
 brew cask install --appdir="/Applications" chatwork
-brew cask install --appdir="/Applications" music-manager
 brew cask install --appdir="/Applications" libreoffice
 brew cask install --appdir="/Applications" google-backup-and-sync
 brew cask install --appdir="/Applications" charles

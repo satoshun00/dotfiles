@@ -84,6 +84,7 @@ brew cask install --appdir="/Applications" chatwork
 brew cask install --appdir="/Applications" libreoffice
 brew cask install --appdir="/Applications" google-backup-and-sync
 brew cask install --appdir="/Applications" charles
+brew cask install --appdir="/Applications" google-cloud-sdk
 
 # Fonts casks
 brew cask install --appdir="/Applications" font-ricty-diminished

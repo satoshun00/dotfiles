@@ -63,34 +63,33 @@ brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 
 # Core casks
-brew install --cask --appdir="~/Applications" xquartz
+brew install --cask xquartz
 
 # Development tool casks
-brew install --cask --appdir="/Applications" sublime-text
-brew install --cask --appdir="/Applications" virtualbox
-brew install --cask --appdir="/Applications" docker
-brew install --cask --appdir="/Applications" visual-studio-code
+brew install --cask virtualbox
+brew install --cask docker
+brew install --cask visual-studio-code
 
 # Misc casks
-brew install --cask --appdir="/Applications" google-chrome
-brew install --cask --appdir="/Applications" firefox
-brew install --cask --appdir="/Applications" skype
-brew install --cask --appdir="/Applications" slack
-brew install --cask --appdir="/Applications" dropbox
-brew install --cask --appdir="/Applications" evernote
-brew install --cask --appdir="/Applications" spotify
-brew install --cask --appdir="/Applications" google-japanese-ime
-brew install --cask --appdir="/Applications" tunnelbear
-brew install --cask --appdir="/Applications" adobe-creative-cloud
-brew install --cask --appdir="/Applications" chatwork
-brew install --cask --appdir="/Applications" libreoffice
-brew install --cask --appdir="/Applications" google-backup-and-sync
-brew install --cask --appdir="/Applications" charles
-brew install --cask --appdir="/Applications" google-cloud-sdk
-brew install --cask --appdir="/Applications" unity-hub
+brew install --cask google-chrome
+brew install --cask firefox
+brew install --cask skype
+brew install --cask slack
+brew install --cask dropbox
+brew install --cask evernote
+brew install --cask spotify
+brew install --cask google-japanese-ime
+brew install --cask tunnelbear
+brew install --cask adobe-creative-cloud
+brew install --cask chatwork
+brew install --cask libreoffice
+brew install --cask google-backup-and-sync
+brew install --cask charles
+brew install --cask google-cloud-sdk
+brew install --cask unity-hub
 
 # Fonts casks
-brew install --cask --appdir="/Applications" font-ricty-diminished
+brew install --cask font-ricty-diminished
 
 # JUMAN++
 brew tap chezou/homebrew-jumanpp

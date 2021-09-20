@@ -11,7 +11,10 @@ eg2.tslint
 eg2.vscode-npm-script
 flowtype.flow-for-vscode
 gerane.Theme-Twilight
+hashicorp.terraform
 jebbs.plantuml
+ms-dotnettools.csharp
 ms-python.python
 mohsen1.prettify-json
 timonwong.shellcheck
+yzhang.markdown-all-in-one

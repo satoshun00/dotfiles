@@ -39,7 +39,6 @@ brew install go
 brew install git
 brew install git-lfs
 brew install tree
-brew install python@2
 brew install python
 brew install ruby-build
 brew install rbenv

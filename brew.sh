@@ -48,6 +48,7 @@ brew install mkcert
 brew install nkf
 brew install redis
 brew install jq
+brew install java
 
 # Install Heroku
 brew install heroku/brew/heroku
@@ -62,7 +63,6 @@ brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 
 # Core casks
-brew install --cask --appdir="~/Applications" java
 brew install --cask --appdir="~/Applications" xquartz
 
 # Development tool casks

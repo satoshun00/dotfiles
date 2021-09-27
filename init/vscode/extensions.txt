@@ -1,6 +1,5 @@
 Arjun.swagger-viewer
 EditorConfig.EditorConfig
-PeterJausovec.vscode-docker
 akmittal.hugofy
 blzjns.vscode-raml
 blanu.vscode-styled-jsx

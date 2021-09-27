@@ -6,16 +6,6 @@
 # This script might be run with .dots, which uses elevated privileges
 sudo -K
 
-echo "------------------------------"
-echo "Setting up pip."
-
-# Install pip
-wget -O - https://bootstrap.pypa.io/get-pip.py | python
-
-# Tensorflow deps
-easy_install -U six
-easy_install -U numpy
-easy_install wheel
 ###############################################################################
 # Virtual Enviroments                                                         #
 ###############################################################################
@@ -34,30 +24,6 @@ echo "Source virtualenvwrapper"
 
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
-###############################################################################
-# Python 2 Virtual Enviroment                                                 #
-###############################################################################
-
-echo "------------------------------"
-echo "Setting up py2 virtual environment."
-
-# Create a Python2 environment
-mkvirtualenv py2
-workon py2
-
-export PIP_DEFAULT_TIMEOUT=300
-# Install Python modules
-pip install --upgrade numpy
-pip install --upgrade scipy
-pip install --upgrade matplotlib
-pip install --upgrade pandas
-pip install --upgrade sympy
-pip install --upgrade nose
-pip install --upgrade unittest2
-pip install --upgrade seaborn
-pip install --upgrade scikit-learn
-pip install --upgrade "ipython[all]"
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -87,5 +53,4 @@ pip install --upgrade "https://storage.googleapis.com/tensorflow/mac/cpu/tensorf
 
 echo "------------------------------"
 echo "Script completed."
-echo "Usage: workon py2 for Python2"
 echo "Usage: workon py3 for Python3"

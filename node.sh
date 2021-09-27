@@ -5,6 +5,8 @@ if which nodebrew > /dev/null; then
 else
   curl -L git.io/nodebrew | perl - setup
   source ~/.bashrc
-  nodebrew install v12.7.0
-  nodebrew use v12.7.0
+  nodebrew install v14.17.6
+  nodebrew use v14.17.6
 fi
+
+npm i -g firebase-tools

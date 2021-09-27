@@ -49,6 +49,8 @@ brew install nkf
 brew install redis
 brew install jq
 brew install java
+brew install fastlane
+brew install mysql-client
 
 # Install Heroku
 brew install heroku/brew/heroku
@@ -68,6 +70,8 @@ brew install --cask xquartz
 # Development tool casks
 brew install --cask virtualbox
 brew install --cask docker
+brew install --cask dotnet
+brew install --cask visual-studio
 brew install --cask visual-studio-code
 
 # Misc casks

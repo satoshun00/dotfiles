@@ -4,18 +4,21 @@ USERNAME=$(git config --get user.name)
 SSH_KEY="${HOME}/.ssh/id_rsa"
 KEY_NAME="$(whoami)@$(hostname)"
 
-echo 'This setup requires your Github Password and Two-Factor authentication code.'
+echo 'This setup requires your Github Personal access token.'
 
-echo 'Enter your Two-Factor authentication code (To skip this setup, just press ENTER).'
+echo 'You can create new Personal access token here: https://github.com/settings/tokens'
 
-read -e GITHUB_OTP
+echo 'hint: You need to check "write:public_key" scope to run this script.'
 
-[ -n "${GITHUB_OTP}" ] || exit 0;
+echo 'Enter your Github Personal access token (To skip this setup, just press ENTER).'
+
+read -e GITHUB_TOKEN
+
+[ -n "${GITHUB_TOKEN}" ] || exit 0;
 
 # POST ssh-pubkey to Github
 
-echo 'Enter your Password for Github.'
-result=$(curl --silent -u "${USERNAME}" --header "X-GitHub-OTP: ${GITHUB_OTP}" --data "{\"title\":\"${KEY_NAME}\",\"key\":\"$(cat ${SSH_KEY}.pub)\"}" https://api.github.com/user/keys)
+result=$(curl --silent -u "${USERNAME}:${GITHUB_TOKEN}" --data "{\"title\":\"${KEY_NAME}\",\"key\":\"$(cat ${SSH_KEY}.pub)\"}" https://api.github.com/user/keys)
 if echo "${result}" | grep -q 'key is already in use'; then
   echo 'Key is already in use.'
 elif echo "${result}" | grep -q '"verified": true'; then

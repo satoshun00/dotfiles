@@ -27,6 +27,10 @@ done;
 # Add tab completion for many Bash commands
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh";
 
+# google-cloud-sdk
+[[ -r "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+[[ -r "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]] && source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc";
+
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
@@ -48,3 +52,6 @@ if [ -r /usr/local/bin/virtualenvwrapper.sh ] && [ -f /usr/local/bin/virtualenvw
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 export WORKON_HOME=~/.virtualenvs
+
+# mysql-client
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"

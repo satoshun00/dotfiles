@@ -11,7 +11,11 @@
         "**/.svn": false,
         "**/.hg": false,
         "**/CVS": false,
-        "**/.DS_Store": false
+        "**/.DS_Store": false,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "flow.useNPMPackagedFlow": true,
     "git.autofetch": false,

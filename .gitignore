@@ -17,8 +17,5 @@ Thumbs.db
 .boto
 .aws/
 
-# Sublime text
-*sublime-workspace
-
 # Visual Studio Code
 .vscode

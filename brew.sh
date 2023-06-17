@@ -54,6 +54,9 @@ brew install java
 brew install mysql-client
 brew install awscli
 
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
+
 # Core casks
 brew install --cask xquartz
 
@@ -68,10 +71,12 @@ brew install --cask visual-studio-code
 brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask slack
+# google-japanese-ime dependency
+softwareupdate --install-rosetta
 brew install --cask google-japanese-ime
 brew install --cask adobe-creative-cloud
 brew install --cask chatwork
-brew install --cask google-backup-and-sync
+brew install --cask google-drive
 brew install --cask charles
 brew install --cask google-cloud-sdk
 brew install --cask unity-hub

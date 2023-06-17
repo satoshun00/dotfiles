@@ -15,7 +15,6 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Make sure we’re using the latest Homebrew.
@@ -30,11 +29,11 @@ brew install bash-completion@2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
 
-if ! grep -F -q '/usr/local/bin/bash' /etc/shells; then
+if ! grep -F -q '/opt/homebrew/bin/bash' /etc/shells; then
   # Prompts for password
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells;
   # Change to the new shell, prompts for password
-  chsh -s /usr/local/bin/bash;
+  chsh -s /opt/homebrew/bin/bash;
 fi;
 
 brew install wget

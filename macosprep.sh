@@ -13,6 +13,7 @@ echo "Updating macOS.  If this requires a restart, run the script again."
 sudo softwareupdate -ia
 # Install only recommended available updates
 #sudo softwareupdate -irv
+softwareupdate --install-rosetta --agree-to-license
 
 echo "------------------------------"
 echo "Installing Xcode Command Line Tools."

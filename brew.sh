@@ -71,8 +71,6 @@ brew install --cask visual-studio-code
 brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask slack
-# google-japanese-ime dependency
-softwareupdate --install-rosetta
 brew install --cask google-japanese-ime
 brew install --cask adobe-creative-cloud
 brew install --cask chatwork

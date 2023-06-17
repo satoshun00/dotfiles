@@ -25,17 +25,17 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh";
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh";
 
 # google-cloud-sdk
-[[ -r "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-[[ -r "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]] && source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc";
+[[ -r "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]] && source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+[[ -r "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]] && source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc";
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Dock Finder Safari SystemUIServer Terminal" killall;
 
 # Make `python` point to Homebrew python3
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=/opt/homebrew/opt/python/libexec/bin:$PATH
 
 # go
 export GOPATH=$HOME/.go
@@ -48,13 +48,13 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # virtualenv
-if [ -r /usr/local/bin/virtualenvwrapper.sh ] && [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  source /usr/local/bin/virtualenvwrapper.sh
+if [ -r /opt/homebrew/bin/virtualenvwrapper.sh ] && [ -f /opt/homebrew/bin/virtualenvwrapper.sh ]; then
+  source /opt/homebrew/bin/virtualenvwrapper.sh
 fi
 export WORKON_HOME=~/.virtualenvs
 
 # mysql-client
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

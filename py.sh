@@ -23,7 +23,7 @@ echo "------------------------------"
 echo "Source virtualenvwrapper"
 
 export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /opt/homebrew/bin/virtualenvwrapper.sh
 
 ###############################################################################
 # Python 3 Virtual Enviroment                                                 #
@@ -33,7 +33,7 @@ echo "------------------------------"
 echo "Setting up py3 virtual environment."
 
 # Create a Python3 environment
-mkvirtualenv --python=/usr/local/bin/python3 py3
+mkvirtualenv --python=/opt/homebrew/bin/python3 py3
 workon py3
 
 echo "------------------------------"

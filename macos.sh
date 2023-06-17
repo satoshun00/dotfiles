@@ -8,9 +8,9 @@ MACOS_COMPUTER_NAME="${MACOS_COMPUTER_NAME:="satoshun00's MacBook"}";
 MACOS_HOST_NAME="${MACOS_HOST_NAME:="satoshun00-macbook"}";
 MACOS_LOCAL_HOST_NAME="${MACOS_LOCAL_HOST_NAME:="satoshun00-macbook"}";
 
-# Close any open System Preferences panes, to prevent them from overriding
+# Close any open System Settings panes, to prevent them from overriding
 # settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
@@ -22,7 +22,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
+# Set computer name (as done via System Settings → Sharing)
 sudo scutil --set ComputerName "${MACOS_COMPUTER_NAME}"
 sudo scutil --set HostName "${MACOS_HOST_NAME}"
 sudo scutil --set LocalHostName "${MACOS_LOCAL_HOST_NAME}"
@@ -317,7 +317,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Show item info near icons on the desktop and in other icon views
 sudo /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-sudo /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo bool true" ~/Library/Preferences/com.apple.finder.plist
+sudo /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
 # Show item info at the bottom of the icons on the desktop
@@ -325,7 +325,7 @@ sudo /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:s
 
 # Enable snap-to-grid for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy string grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Set grid spacing for icons on the desktop and in other icon views
@@ -394,7 +394,7 @@ defaults write com.apple.dock persistent-apps -array
 killall Dock
 
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/App Store.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/System Preferences.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/System Settings.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/Utilities/Terminal.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
@@ -837,7 +837,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 mkdir -p ~/Library/Application\ Support/Code/User
 mkdir -p ~/.config/Code/User
 cp init/vscode/settings.json ~/Library/Application\ Support/Code/User/ 2> /dev/null
-wget -P ~/.config/Code/User https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css
+curl -o ~/.config/Code/User/github-markdown.min.css https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css
 
 modules=$(cat init/vscode/extensions.txt)
 for module in $modules; do

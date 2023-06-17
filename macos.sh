@@ -2,6 +2,12 @@
 
 # ~/macos.sh — Originally from https://mths.be/macos
 
+[[ -r "init/variables.sh" ]] && source "init/variables.sh";
+
+MACOS_COMPUTER_NAME="${MACOS_COMPUTER_NAME:="satoshun00's MacBook"}";
+MACOS_HOST_NAME="${MACOS_HOST_NAME:="satoshun00-macbook"}";
+MACOS_LOCAL_HOST_NAME="${MACOS_LOCAL_HOST_NAME:="satoshun00-macbook"}";
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -17,10 +23,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "satoshun00's MacBook"
-sudo scutil --set HostName "satoshun00-macbook"
-sudo scutil --set LocalHostName "satoshun00-macbook"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "SATOSHUN00-MAC"
+sudo scutil --set ComputerName "${MACOS_COMPUTER_NAME}"
+sudo scutil --set HostName "${MACOS_HOST_NAME}"
+sudo scutil --set LocalHostName "${MACOS_LOCAL_HOST_NAME}"
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)
 #sudo pmset -a standbydelay 86400
@@ -830,7 +835,9 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ###############################################################################
 
 mkdir -p ~/Library/Application\ Support/Code/User
+mkdir -p ~/.config/Code/User
 cp init/vscode/settings.json ~/Library/Application\ Support/Code/User/ 2> /dev/null
+wget -P ~/.config/Code/User https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css
 
 modules=$(cat init/vscode/extensions.txt)
 for module in $modules; do

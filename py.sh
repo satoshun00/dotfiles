@@ -36,21 +36,6 @@ echo "Setting up py3 virtual environment."
 mkvirtualenv --python=/usr/local/bin/python3 py3
 workon py3
 
-export PIP_DEFAULT_TIMEOUT=300
-# Install Python modules
-pip install --upgrade numpy
-pip install --upgrade scipy
-pip install --upgrade matplotlib
-pip install --upgrade pandas
-pip install --upgrade sympy
-pip install --upgrade nose
-pip install --upgrade unittest2
-pip install --upgrade seaborn
-pip install --upgrade scikit-learn
-pip install --upgrade scikit-image
-pip install --upgrade "ipython[all]"
-pip install --upgrade "https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.0rc1-py3-none-any.whl"
-
 echo "------------------------------"
 echo "Script completed."
 echo "Usage: workon py3 for Python3"

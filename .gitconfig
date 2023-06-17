@@ -1,8 +1,6 @@
 [user]
   name = satoshun00
   email = shun.sato@fenneclab.com
-[branch "master"]
-  merge = refs/heads/master
 [core]
   excludesfile = ~/.gitignore
   editor = code -w

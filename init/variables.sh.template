@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Change your computer name to avoid conflict in your local network.
+MACOS_COMPUTER_NAME="satoshun00's MacBookAir";
+MACOS_HOST_NAME="satoshun00-macbookair";
+MACOS_LOCAL_HOST_NAME="satoshun00-macbookair";

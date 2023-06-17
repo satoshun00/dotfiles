@@ -32,7 +32,7 @@ done;
 [[ -r "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]] && source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc";
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+complete -o "nospace" -W "Dock Finder Safari SystemUIServer Terminal" killall;
 
 # Make `python` point to Homebrew python3
 export PATH=/usr/local/opt/python/libexec/bin:$PATH

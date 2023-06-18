@@ -61,3 +61,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# npm 
+
+eval "$(npm completion)"

@@ -831,20 +831,6 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 #defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
-# Visual Studio Code                                                          #
-###############################################################################
-
-mkdir -p ~/Library/Application\ Support/Code/User
-mkdir -p ~/.config/Code/User
-cp init/vscode/settings.json ~/Library/Application\ Support/Code/User/ 2> /dev/null
-curl -o ~/.config/Code/User/github-markdown.min.css https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css
-
-modules=$(cat init/vscode/extensions.txt)
-for module in $modules; do
-  code --install-extension "$module" || true
-done
-
-###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

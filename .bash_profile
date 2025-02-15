@@ -27,34 +27,15 @@ done;
 # Add tab completion for many Bash commands
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh";
 
-# google-cloud-sdk
-[[ -r "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]] && source '/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
-[[ -r "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]] && source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc";
-
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Dock Finder Safari SystemUIServer Terminal" killall;
-
-# Make `python` point to Homebrew python3
-export PATH=/opt/homebrew/opt/python/libexec/bin:$PATH
 
 # go
 export GOPATH=$HOME/.go
 export PATH="${PATH}:${GOPATH//://bin:}/bin"
 
-# rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# virtualenv
-if [ -r /opt/homebrew/bin/virtualenvwrapper.sh ] && [ -f /opt/homebrew/bin/virtualenvwrapper.sh ]; then
-  source /opt/homebrew/bin/virtualenvwrapper.sh
-fi
-export WORKON_HOME=~/.virtualenvs
-
-# mysql-client
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+# mise
+eval "$(~/.local/bin/mise activate bash)"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -62,6 +43,5 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# npm 
-
+# npm
 eval "$(npm completion)"

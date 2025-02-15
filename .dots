@@ -87,14 +87,6 @@ function runDots() {
       echo ""
       ./bitbucket.sh
     fi
-    if [ $ARG == "py" ] || [ $ARG == "all" ]; then
-      # Run the py.sh Script
-      echo "------------------------------"
-      echo "Setting up Python development environment."
-      echo "------------------------------"
-      echo ""
-      ./py.sh
-    fi
   done
 
   echo "------------------------------"

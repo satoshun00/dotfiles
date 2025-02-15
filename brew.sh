@@ -41,29 +41,13 @@ brew install go
 brew install git
 brew install git-lfs
 brew install tree
-brew install python
-brew install ruby-build
-brew install rbenv
 brew install coreutils
 brew install shellcheck
-brew install mkcert
-brew install nkf
 brew install jq
-brew install java
-brew install mysql-client
 brew install awscli
 
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-fonts
-
-# Core casks
-brew install --cask xquartz
-
 # Development tool casks
-brew install --cask virtualbox
 brew install --cask docker
-brew install --cask dotnet
-brew install --cask visual-studio
 brew install --cask visual-studio-code
 
 # Misc casks
@@ -74,12 +58,7 @@ brew install --cask google-japanese-ime
 brew install --cask adobe-creative-cloud
 brew install --cask chatwork
 brew install --cask google-drive
-brew install --cask charles
 brew install --cask google-cloud-sdk
-brew install --cask unity-hub
-
-# Fonts casks
-brew install --cask font-ricty-diminished
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -52,12 +52,8 @@ brew install --cask visual-studio-code
 
 # Misc casks
 brew install --cask google-chrome
-brew install --cask firefox
 brew install --cask slack
 brew install --cask google-japanese-ime
-brew install --cask adobe-creative-cloud
-brew install --cask chatwork
-brew install --cask google-drive
 brew install --cask google-cloud-sdk
 
 # Remove outdated versions from the cellar.

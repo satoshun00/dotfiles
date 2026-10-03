@@ -63,6 +63,14 @@ function runDots() {
       echo ""
       ./node.sh
     fi
+    if [ $ARG == "claude" ] || [ $ARG == "all" ]; then
+      # Run the claude.sh Script
+      echo "------------------------------"
+      echo "Installing Claude Code."
+      echo "------------------------------"
+      echo ""
+      ./claude.sh
+    fi
     if [ $ARG == "ssh" ] || [ $ARG == "all" ]; then
       # Run the ssh.sh Script
       echo "------------------------------"

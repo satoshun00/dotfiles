@@ -63,6 +63,14 @@ function runDots() {
       echo ""
       ./node.sh
     fi
+    if [ $ARG == "claude" ] || [ $ARG == "all" ]; then
+      # Run the claude.sh Script
+      echo "------------------------------"
+      echo "Installing Claude Code."
+      echo "------------------------------"
+      echo ""
+      ./claude.sh
+    fi
     if [ $ARG == "ssh" ] || [ $ARG == "all" ]; then
       # Run the ssh.sh Script
       echo "------------------------------"
@@ -79,21 +87,11 @@ function runDots() {
       echo ""
       ./github.sh
     fi
-    if [ $ARG == "bitbucket" ] || [ $ARG == "all" ]; then
-      # Run the bitbucket.sh Script
-      echo "------------------------------"
-      echo "Setting up bitbucket public keys."
-      echo "------------------------------"
-      echo ""
-      ./bitbucket.sh
-    fi
   done
 
   echo "------------------------------"
   echo "TODO: GoogleJapaneseIME setting"
-  echo "TODO: Some ssh key settings"
   echo "TODO: Install Xcode from AppStore"
-  echo "TODO: Install LINE from AppStore"
   echo "TODO: Login Slack teams: https://slack.com/signin/find"
 
   echo "------------------------------"

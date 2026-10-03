@@ -87,14 +87,6 @@ function runDots() {
       echo ""
       ./github.sh
     fi
-    if [ $ARG == "bitbucket" ] || [ $ARG == "all" ]; then
-      # Run the bitbucket.sh Script
-      echo "------------------------------"
-      echo "Setting up bitbucket public keys."
-      echo "------------------------------"
-      echo ""
-      ./bitbucket.sh
-    fi
   done
 
   echo "------------------------------"

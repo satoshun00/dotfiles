@@ -19,3 +19,12 @@ Thumbs.db
 
 # Visual Studio Code
 .vscode
+
+# Claude Code local / runtime files (keep only settings.json)
+.claude/settings.local.json
+.claude/.credentials.json
+.claude/projects/
+.claude/todos/
+.claude/shell-snapshots/
+.claude/statsig/
+.claude/history.jsonl
